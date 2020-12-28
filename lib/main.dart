@@ -2,6 +2,7 @@
 // import
 import 'package:flutter/material.dart';
 import 'package:wallpaper8_kelompok8/Screens/Welcome/welcome_screen.dart';
+import 'package:wallpaper8_kelompok8/Screens/splash/splash_screen.dart';
 import 'package:wallpaper8_kelompok8/constants.dart';
 
 void main() => runApp(MyApp());
@@ -19,7 +20,13 @@ class MyApp extends StatelessWidget {
           textButtonTheme: TextButtonThemeData(
               style: TextButton.styleFrom(primary: Color(0xFF6F35A5)))),
       // halaman pertama
-      home: WelcomeScreen(),
+      initialRoute: SplashScreen.id,
+      // rute halaman
+      routes: {
+        SplashScreen.id: (context) => SplashScreen(),
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+      },
+      // home: WelcomeScreen(),
     );
   }
 }
