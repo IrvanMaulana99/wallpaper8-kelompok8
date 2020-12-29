@@ -1,4 +1,5 @@
 // import
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wallpaper8_kelompok8/Screens/Login/login_screen.dart';
@@ -6,12 +7,21 @@ import 'package:wallpaper8_kelompok8/Screens/Signup/components/background.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/components/or_divider.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/components/social_icon.dart';
 import 'package:wallpaper8_kelompok8/Screens/Welcome/welcome_screen.dart';
+import 'package:wallpaper8_kelompok8/Screens/home/home_screen.dart';
 import 'package:wallpaper8_kelompok8/components/cek_akun.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_button.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_input_field.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_password_field.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  String _email, _password;
+  final auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,16 +45,30 @@ class Body extends StatelessWidget {
             // input email
             RoundedInputField(
               hintText: "Email",
-              onChanged: (value) {},
+              onChanged: (value) {
+                setState(() {
+                  _email = value.trim();
+                });
+              },
             ),
             // input password
             RoundedPasswordField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                setState(() {
+                  _password = value.trim();
+                });
+              },
             ),
             // button daftar
             RoundedButton(
               text: "DAFTAR",
-              press: () {},
+              press: () {
+                auth.createUserWithEmailAndPassword(
+                    email: _email, password: _password).then((_){
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    });
+              },
             ),
             // batas
             SizedBox(height: size.height * 0.03),
