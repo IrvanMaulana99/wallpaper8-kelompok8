@@ -7,7 +7,7 @@ import 'package:wallpaper8_kelompok8/Screens/Signup/components/background.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/components/or_divider.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/components/social_icon.dart';
 import 'package:wallpaper8_kelompok8/Screens/Welcome/welcome_screen.dart';
-import 'package:wallpaper8_kelompok8/Screens/home/home_screen.dart';
+import 'package:wallpaper8_kelompok8/Screens/verifikasi%20email/verifikasi.dart';
 import 'package:wallpaper8_kelompok8/components/cek_akun.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_button.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_input_field.dart';
@@ -63,11 +63,13 @@ class _BodyState extends State<Body> {
             RoundedButton(
               text: "DAFTAR",
               press: () {
-                auth.createUserWithEmailAndPassword(
-                    email: _email, password: _password).then((_){
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
-                    });
+                auth
+                    .createUserWithEmailAndPassword(
+                        email: _email, password: _password)
+                    .then((_) {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => VerifikasiScreen()));
+                });
               },
             ),
             // batas
