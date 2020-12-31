@@ -6,6 +6,7 @@ import 'package:wallpaper8_kelompok8/Screens/Login/components/background.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/signup_screen.dart';
 import 'package:wallpaper8_kelompok8/Screens/Welcome/welcome_screen.dart';
 import 'package:wallpaper8_kelompok8/Screens/home/home_screen.dart';
+import 'package:wallpaper8_kelompok8/Screens/reset%20password/reset.dart';
 import 'package:wallpaper8_kelompok8/components/cek_akun.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_button.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_input_field.dart';
@@ -67,11 +68,13 @@ class _BodyState extends State<Body> {
             RoundedButton(
               text: "LOGIN",
               press: () {
-                auth.signInWithEmailAndPassword(
-                    email: _email, password: _password).then((_){
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
-                    });
+                auth
+                    .signInWithEmailAndPassword(
+                        email: _email, password: _password)
+                    .then((_) {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                });
               },
             ),
             // batas
@@ -91,12 +94,25 @@ class _BodyState extends State<Body> {
               },
             ),
             // teks ke halaman awal
-            TextButton(
-              child: Text('Kembali ke Home'),
-              onPressed: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => WelcomeScreen()));
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TextButton(
+                  child: Text('Kembali ke Home'),
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => WelcomeScreen()));
+                  },
+                ),
+                // teks untuk ke halaman reset password
+                TextButton(
+                  child: Text('Lupa Password'),
+                  onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => ResetScreen())),
+                )
+              ],
             )
           ],
         ),
