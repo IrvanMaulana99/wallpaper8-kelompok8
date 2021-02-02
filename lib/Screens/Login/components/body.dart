@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:wallpaper8_kelompok8/Screens/Login/components/background.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/signup_screen.dart';
 import 'package:wallpaper8_kelompok8/Screens/Welcome/welcome_screen.dart';
-import 'package:wallpaper8_kelompok8/Screens/home/home_screen.dart';
+import 'package:wallpaper8_kelompok8/Screens/dashboard/dashboard.dart';
 import 'package:wallpaper8_kelompok8/Screens/reset%20password/reset.dart';
 import 'package:wallpaper8_kelompok8/components/cek_akun.dart';
 import 'package:wallpaper8_kelompok8/components/rounded_button.dart';
@@ -73,7 +73,7 @@ class _BodyState extends State<Body> {
                         email: _email, password: _password)
                     .then((_) {
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                      MaterialPageRoute(builder: (context) => Dashboard()));
                 });
               },
             ),

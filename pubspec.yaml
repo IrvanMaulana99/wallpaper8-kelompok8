@@ -28,6 +28,7 @@ dependencies:
   firebase_core: ^0.5.3
   flutter_launcher_icons: ^0.8.1
   flutter_svg: ^0.19.1
+  percent_indicator: ^2.1.9
 
 dev_dependencies:
   flutter_test:
