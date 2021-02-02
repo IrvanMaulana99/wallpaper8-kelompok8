@@ -178,7 +178,8 @@ class _IrvanState extends State<Irvan> {
           shape: BoxShape.circle,
           border: Border.all(width: 4, color: Colors.grey),
           image: DecorationImage(
-            image: NetworkImage('https://i.imgur.com/nx1P2bB.jpg'),
+            image: NetworkImage(
+                'https://firebasestorage.googleapis.com/v0/b/wallpaper8-login.appspot.com/o/irvan.jpg?alt=media&token=6a38bd01-0f6a-4fc6-bcb8-c165eedc38d0'),
             fit: BoxFit.cover,
           ),
         ));

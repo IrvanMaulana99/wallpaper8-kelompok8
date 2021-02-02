@@ -178,7 +178,8 @@ class _LuqmanState extends State<Luqman> {
           shape: BoxShape.circle,
           border: Border.all(width: 4, color: Colors.grey),
           image: DecorationImage(
-            image: NetworkImage('https://i.imgur.com/apl4SJb.jpg'),
+            image: NetworkImage(
+                'https://firebasestorage.googleapis.com/v0/b/wallpaper8-login.appspot.com/o/luqman.jpeg?alt=media&token=79fd9874-ee05-4f40-8fa7-eaf3d78cf1d0'),
             fit: BoxFit.cover,
           ),
         ));

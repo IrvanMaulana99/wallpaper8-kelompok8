@@ -12,6 +12,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         // background
         backgroundColor: Colors.black,
         // body

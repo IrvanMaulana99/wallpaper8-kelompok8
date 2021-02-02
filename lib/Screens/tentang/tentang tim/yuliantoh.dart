@@ -178,7 +178,8 @@ class _YuliantoState extends State<Yulianto> {
           shape: BoxShape.circle,
           border: Border.all(width: 4, color: Colors.grey),
           image: DecorationImage(
-            image: NetworkImage('https://i.imgur.com/VtpuFWH.jpg'),
+            image: NetworkImage(
+                'https://firebasestorage.googleapis.com/v0/b/wallpaper8-login.appspot.com/o/yulianto.jpeg?alt=media&token=d9b86550-5a32-443c-8286-3b9b8b0483be'),
             fit: BoxFit.cover,
           ),
         ));
