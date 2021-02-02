@@ -2,7 +2,7 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:wallpaper8_kelompok8/Screens/home/home_screen.dart';
+import 'package:wallpaper8_kelompok8/Screens/dashboard/dashboard.dart';
 
 class VerifikasiScreen extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class _VerifikasiScreenState extends State<VerifikasiScreen> {
     user = auth.currentUser;
     user.sendEmailVerification();
     // 5 detik setelah verifikasi > fordward
-    timer = Timer.periodic(Duration(seconds: 5), (timer) {
+    timer = Timer.periodic(Duration(seconds: 2), (timer) {
       checkEmailVerified();
     });
     super.initState();
@@ -39,7 +39,7 @@ class _VerifikasiScreenState extends State<VerifikasiScreen> {
       // pemberitahuan email telah dikirim untuk verifikasi
       body: Center(
         child: Text(
-            'Email telah dikirim ke ${user.email} mohon verifikasi emailnya'),
+            'Email telah dikirim ke ${user.email} mohon verifikasi emailnya, \nOtomatis redirect saat email sudah terverifikasi'),
       ),
     );
   }
@@ -51,7 +51,7 @@ class _VerifikasiScreenState extends State<VerifikasiScreen> {
     if (user.emailVerified) {
       timer.cancel();
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen()));
+          MaterialPageRoute(builder: (context) => Dashboard()));
     }
   }
 }

@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wallpaper8_kelompok8/Screens/Login/login_screen.dart';
 import 'package:wallpaper8_kelompok8/Screens/Signup/components/background.dart';
-import 'package:wallpaper8_kelompok8/Screens/Signup/components/or_divider.dart';
-import 'package:wallpaper8_kelompok8/Screens/Signup/components/social_icon.dart';
 import 'package:wallpaper8_kelompok8/Screens/Welcome/welcome_screen.dart';
 import 'package:wallpaper8_kelompok8/Screens/verifikasi%20email/verifikasi.dart';
 import 'package:wallpaper8_kelompok8/components/cek_akun.dart';
@@ -98,27 +96,6 @@ class _BodyState extends State<Body> {
               },
             ),
             // pembatas
-            OrDivider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                // facebook
-                SocalIcon(
-                  iconSrc: "assets/icons/facebook.svg",
-                  press: () {},
-                ),
-                // twitter
-                SocalIcon(
-                  iconSrc: "assets/icons/twitter.svg",
-                  press: () {},
-                ),
-                // google
-                SocalIcon(
-                  iconSrc: "assets/icons/google-plus.svg",
-                  press: () {},
-                ),
-              ],
-            )
           ],
         ),
       ),

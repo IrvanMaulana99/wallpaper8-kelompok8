@@ -17,7 +17,7 @@ class _Wall8FavState extends State<Wall8Fav> {
     return Container(
       child: Center(
         child: Text(
-          'Wall 8 Fav',
+          'Wall 8 Favorit',
           style: TextStyle(fontSize: 30.0),
         ),
       ),

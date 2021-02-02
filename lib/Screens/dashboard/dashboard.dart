@@ -226,7 +226,7 @@ class Dashboard extends StatelessWidget {
                                     height: 5.0,
                                   ),
                                   Text(
-                                    "Privacy Statement",
+                                    "Ketentuan Privasi",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w100),

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:wallpaper8_kelompok8/Screens/dashboard/dashboard.dart';
 import 'package:wallpaper8_kelompok8/Screens/wall8/wall8_fav.dart';
 import 'package:wallpaper8_kelompok8/Screens/wall8/wall8_home.dart';
 import 'package:wallpaper8_kelompok8/Screens/wall8/wall8_images.dart';
@@ -18,6 +19,19 @@ class _Wall8Home1State extends State<Wall8Home1> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Wallpaper 8"),
+        automaticallyImplyLeading: false,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Dashboard()));
+            },
+          )
+        ],
       ),
       body: StreamBuilder(
         stream:
