@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:wallpaper8_kelompok8/Screens/Login/login_screen.dart';
 import 'package:wallpaper8_kelompok8/Screens/list/list%20tim/tim.dart';
 import 'package:wallpaper8_kelompok8/Screens/tentang/tentang%20aplikasi/aplikasi.dart';
+import 'package:wallpaper8_kelompok8/Screens/wall8/wall8_home1.dart';
 
 // Dashboard
 class Dashboard extends StatelessWidget {
@@ -53,7 +54,11 @@ class Dashboard extends StatelessWidget {
                       width: 160.0,
                       height: 160.0,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (context) => Wall8Home1()));
+                        },
                         child: Card(
                           color: Color.fromARGB(255, 21, 21, 21),
                           elevation: 2.0,
