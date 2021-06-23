@@ -13,3 +13,6 @@ Anggota     : 1811390 Muhamad Luqman , 18111174 Yulianto Herlambang
 -----------------------------------------------------------------------------
 Mata Kuliah   : Mobile Programming 2
 -----------------------------------------------------------------------------
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
